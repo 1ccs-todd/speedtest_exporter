@@ -50,5 +50,5 @@ ENV LISTEN_PORT=""
 ENV FALLBACK=""
 ENV SERVER_ID=""
 
-ENTRYPOINT [ "/usr/bin/speedtest_exporter", "-port ${LISTEN_PORT:-9090}", "-server_id ${SERVER_ID:--1}", "${FALLBACK:--server_fallback}" ]
-#ENTRYPOINT [ "/usr/bin/speedtest_exporter" ]
+ENTRYPOINT [ "/usr/bin/speedtest_exporter" ]
+CMD "-port ${LISTEN_PORT:-9090}", "-server_id ${SERVER_ID:--1}", "${FALLBACK:--server_fallback}" ]#ENTRYPOINT [ "/usr/bin/speedtest_exporter" ]
